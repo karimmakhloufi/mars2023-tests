@@ -54,13 +54,5 @@ services:
       db:
         condition: service_healthy
 
-  images:
-    build: ./images-upload-service
-    volumes:
-      - ./images-upload-service/src:/app/src
-      - ./images-upload-service/uploads:/app/uploads
-    ports:
-      - 8000:8000
-
 volumes:
   postgres:
